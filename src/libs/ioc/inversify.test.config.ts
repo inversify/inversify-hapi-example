@@ -1,11 +1,12 @@
-import { IKernel } from "inversify";
-import {IRepositoryConfig, IServerConfig} from "../../configs/interfaces";
-import Configurations from "../../configs/configurations";
+import { interfaces } from "inversify";
+import { IRepositoryConfig, IServerConfig } from "../../configs/interfaces";
 import { ITaskRepository } from "../repository/interfaces";
+
+import Configurations from "../../configs/configurations";
 import TaskRepository from "../repository/memory/taskRepository";
 
 
-export default function(kernel: IKernel) {
+export default function(kernel: interfaces.Kernel) {
     //Configurations
     kernel.bind<IRepositoryConfig>("IRepositoryConfig").to(Configurations).inSingletonScope();
     kernel.bind<IServerConfig>("IServerConfig").to(Configurations).inSingletonScope();

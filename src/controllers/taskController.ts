@@ -3,7 +3,7 @@ import * as Boom from "boom";
 import * as Joi from "joi";
 import BaseController from "./baseController";
 import * as TaskModel from "../models/taskModel";
-import Task from "../core/Task";
+import Task from "../core/task";
 import { ITaskRepository } from "../libs/repository/interfaces";
 
 export default class TaskController extends BaseController {
