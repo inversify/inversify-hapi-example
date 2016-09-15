@@ -1,11 +1,12 @@
-/// <reference path="../typings.d.ts" />
-import * as Hapi from "hapi";
-import Routes from "./routes";
-import kernel from "./libs/ioc";
-import * as path from "path";
-import * as fs from "fs";
 import { IPlugin } from "./libs/plugins/interfaces";
 import { IServerConfig } from "./configs/interfaces";
+
+import * as fs from "fs";
+import * as Hapi from "hapi";
+import * as path from "path";
+
+import kernel from "./libs/ioc";
+import Routes from "./routes";
 
 const serverConfigs = kernel.get<IServerConfig>("IServerConfig");
 const port = process.env.port || serverConfigs.port;

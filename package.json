@@ -14,38 +14,40 @@
     "nodejs"
   ],
   "scripts": {
-    "build": "gulp build",
-    "start": "node build/src/index.js",
-    "setup": "npm install & typings install",  
-    "test": "gulp test"
+    "test": "nyc -r=text -i ts-node/register -e .ts mocha -t 5000 --require ts-node/register test/**/*.ts",
+    "start": "ts-node src/server"
   },
   "dependencies": {
-    "boom": "^3.1.2",
-    "fs": "^0.0.2",
-    "good": "^6.6.0",
-    "good-console": "^5.3.1",
-    "hapi": "^13.2.2",
-    "hapi-swagger": "^4.3.1",
-    "inert": "^3.2.0",
-    "inversify": "^2.0.0-beta.1",
-    "joi": "^8.0.5",
-    "moment": "^2.12.0",
-    "mongodb": "^2.1.11",
-    "node-uuid": "^1.4.7",
-    "path": "^0.12.7",
-    "reflect-metadata": "^0.1.3",
-    "vision": "^4.0.1"
+    "@types/boom": "0.0.31",
+    "@types/hapi": "13.0.34",
+    "@types/inversify": "2.0.30",
+    "@types/joi": "9.0.31",
+    "@types/mongodb": "2.1.32",
+    "@types/node": "6.0.38",
+    "@types/node-uuid": "0.0.27",
+    "boom": "4.0.0",
+    "good": "6.6.0",
+    "good-console": "5.3.1",
+    "hapi": "15.0.3",
+    "hapi-swagger": "7.2.0",
+    "inert": "4.0.2",
+    "inversify": "2.0.0",
+    "joi": "9.0.4",
+    "moment": "2.15.0",
+    "mongodb": "2.2.10",
+    "node-uuid": "1.4.7",
+    "path": "0.12.7",
+    "reflect-metadata": "0.1.8",
+    "vision": "4.1.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^2.2.0",
-    "gulp-rimraf": "^0.2.0",
-    "gulp-tslint": "4.3.4",
-    "tslint": "^3.6.0",
-    "typescript": "^1.8.9"
-  },
-  "engines": {
-    "node": ">=4.1.1"
+    "@types/chai": "3.4.32",
+    "@types/mocha": "2.2.31",
+    "chai": "3.5.0",
+    "mocha": "3.0.2",
+    "nyc": "8.1.0",
+    "ts-node": "1.3.0",
+    "tslint": "3.15.1",
+    "typescript": "2.0.2"
   }
 }

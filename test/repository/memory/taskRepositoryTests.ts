@@ -1,8 +1,9 @@
-/// <reference path="../../../typings.d.ts" />
-import * as chai from "chai";
-import TaskRepository from "../../../src/libs/repository/memory/taskRepository";
-import Task from "../../../src/core/task";
 import { ITaskRepository } from "../../../src/libs/repository/interfaces";
+
+import * as chai from "chai";
+
+import Task from "../../../src/core/task";
+import TaskRepository from "../../../src/libs/repository/memory/taskRepository";
 
 let assert = chai.assert;
 

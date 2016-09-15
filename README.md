@@ -4,14 +4,11 @@ Boilerplate template for node and typescript api's.
 
 **Installation**
 
-* *npm run setup* (install nuget packages & typings)
+* *npm install* (installs all needed npm packages)
 
 **Run**
 
-* *gulp build* (build ts files)
-* *gulp test* (run mocha tests)
-* *gulp tslint* (run tslint)
-* *gulp watch* (watch ts files)
+* *npm test* (run the tests)
 * *npm start* (start the application)
 
 **Features**
@@ -20,8 +17,6 @@ Boilerplate template for node and typescript api's.
 * *Swagger documentation*
 * *Generic mongoDb and memory repository*
 
-
 Running on port 5000 ex: localhost:5000/docs
 
 Have fun :)
-

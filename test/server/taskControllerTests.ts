@@ -1,9 +1,8 @@
-/// <reference path="../../typings.d.ts" />
 import * as chai from "chai";
+
+import Server from "../../src/server";
 import Task from "../../src/core/task";
 import TaskController from "../../src/controllers/taskController";
-import Server from "../../src/server";
-
 
 let assert = chai.assert;
 

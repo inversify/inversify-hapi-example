@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "build",
-    "target": "es6",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "types": [
+      "inversify",
+      "mocha",
+      "reflect-metadata"
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
-  },
-  "exclude": [
-    "node_modules",
-    "typings"
-  ]
+  }
 }

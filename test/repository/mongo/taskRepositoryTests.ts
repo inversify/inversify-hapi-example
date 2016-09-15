@@ -1,11 +1,12 @@
-/// <reference path="../../../typings.d.ts" />
-import * as chai from "chai";
 import "reflect-metadata";
-import TaskRepository from "../../../src/libs/repository/mongo/taskRepository";
-import Task from "../../../src/core/task";
 import { ITaskRepository } from "../../../src/libs/repository/interfaces";
 import {IRepositoryConfig} from "../../../src/configs/interfaces";
+
+import * as chai from "chai";
+
 import Kernel from "../../../src/libs/ioc";
+import Task from "../../../src/core/task";
+import TaskRepository from "../../../src/libs/repository/mongo/taskRepository";
 
 const configurations = Kernel.get<IRepositoryConfig>("IRepositoryConfig");
 const assert = chai.assert;
